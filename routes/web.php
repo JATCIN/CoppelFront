@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\SeguimientoDenunciaController;
+use App\Http\Controllers\DenunciaController;
+use App\Http\Controllers\DenunciasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +27,12 @@ Route::get('/dashboard', function () {
 
 Route::get('/seguimientoDenuncia',[SeguimientoDenunciaController::class, 'create'])->name('seguimientoDenuncia');
 Route::post('/seguimientoDenuncia',[SeguimientoDenunciaController::class, 'store'])->name('SeguimientoDenuncia.store');
+
+
+Route::get('/denuncia',[DenunciaController::class, 'create'])->name('denuncia');
+Route::post('/denuncia',[DenunciaController::class, 'store'])->name('denuncia.store');
+
+Route::get('/denuncias',[DenunciasController::class, 'index'])->name('denuncias.index');
 
 
 Route::middleware('auth')->group(function () {
