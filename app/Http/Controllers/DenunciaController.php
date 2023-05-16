@@ -27,11 +27,14 @@ class DenunciaController extends Controller
             'numero_centro' => $request->numero_centro,
 
         ]);
-       
-            $data = json_decode($response->body(), true); 
-    
-            return view('datosDenuncia', compact('data'));
-      
+        $data = json_decode($response->body(), true);
+
+        if (isset($data['denuncias'])) {
+            $denuncias = $data['denuncias'];
+            return view('datosDenuncia', ['denuncia' => $data['denuncias']]);
+        } else {
+            return response()->json(['message' => 'Error al crear la denuncia'], 500);
+        }
     }
 
 }
