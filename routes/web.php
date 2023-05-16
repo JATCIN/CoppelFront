@@ -33,6 +33,8 @@ Route::get('/denuncia',[DenunciaController::class, 'create'])->name('denuncia');
 Route::post('/denuncia',[DenunciaController::class, 'store'])->name('denuncia.store');
 
 Route::get('/denuncias',[DenunciasController::class, 'index'])->name('denuncias.index');
+Route::get('/denuncias/{denuncias_id}',[DenunciasController::class, 'view'])->name('denuncias.view');
+Route::post('/denuncias/update',[DenunciasController::class, 'update'])->name('denuncias.update');
 
 
 Route::middleware('auth')->group(function () {

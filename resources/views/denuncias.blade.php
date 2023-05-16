@@ -22,6 +22,7 @@
                 <th>FOLIO</th>
                 <th>EMPRESA</th>
                 <th>DENUNCIANTE</th>
+                <th>ESTATUS</th>
                 <th>ACCIONES</th>
             </tr>
         </thead>
@@ -31,8 +32,9 @@
                     <td>{{ $denuncia['folio'] }}</td>
                     <td>{{ $denuncia['empresa']['nombre'] }}</td>
                     <td>{{ $denuncia['usuario']['nombre'] }}</td>
+                    <td>{{ $denuncia['estatus'] }}</td>
                     <td>
-                        <button onclick="editarDenuncia('{{ $denuncia['id'] }}')">Editar</button>
+                        <a href="{{route('denuncias.view',$denuncia['id']) }}">DETALLES</a>
                     </td>
                 </tr>
             @endforeach
