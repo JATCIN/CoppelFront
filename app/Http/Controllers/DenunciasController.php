@@ -25,7 +25,7 @@ class DenunciasController extends Controller
         $url = env('URL_SERVER_API','http://127.0.0.1');
         $response = Http::put($url.'/denuncias/'.$request->id,[
         'estatus' => $request->estatus,
-        'comentarios' => $request->estatus
+        'comentarios' => $request->comentarios
     ]);
     return redirect()->route('denuncias.index');
     }

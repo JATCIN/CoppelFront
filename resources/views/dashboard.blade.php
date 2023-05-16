@@ -12,9 +12,11 @@
                     {{ __("¿Qué quieres hacer?") }}
                     
                     <div class="mt-4">
-                        <a href="{{ route('denuncias.index') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">
-                            {{ __("VER TODAS LAS DENUNCIAS") }}
-                        </a>
+                        <div class="bg- rounded-md inline-block text-center">
+                            <a href="{{ route('denuncias.index') }}" class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded inline-block">
+                                {{ __("VER TODAS LAS DENUNCIAS") }}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

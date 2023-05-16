@@ -9,17 +9,17 @@
     <title>Document</title>
     <style>
         body {
-            background-color: #dae635;
+            background-color: #fbfbfb;
             padding: 20px;
         }
         .container {
-            background-color: white;
-            padding: 20px;
+            background-color: rgb(11, 181, 54);
+            padding: 70px;
             border-radius: 5px;
-            position: absolute; /* Agrega una posición absoluta al container */
-            top: 50%; /* Ajusta la posición verticalmente */
-            left: 50%; /* Ajusta la posición horizontalmente */
-            transform: translate(-50%, -50%); /* Centra el container en el medio de la pantalla */
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
         }
         h1 {
             text-align: center;
@@ -28,16 +28,24 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
         th, td {
-            padding: 10px;
+            padding: 20px;
             text-align: left;
-            border: 1px solid #e6ee46;
+            border: 1px solid #000000;
+        }
+        .logo {
+            position: absolute;
+            top: -15px;
+            left: 50px;
+            max-width: 300px; /* Ajusta el tamaño de la imagen */
         }
     </style>
 </head>
 <body>
+    <h1>LINEA DE DENUNCIA </h1>
+    <img src="https://gc1holding.com/wp-content/uploads/2018/02/Logo-coppel.png" alt="Logo" class="logo">
     <div class="container">
         <h1>DENUNCIA</h1>
         
@@ -58,9 +66,7 @@
             </tbody>
         </table>
 
-        <div class="gray-box" style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);">
-            <button class="btn btn-primary" onclick="window.location.href='/'"> Listo</button>
-        </div>
+        <button onclick="window.location.href = '/';" class="btn btn-primary">LISTO</button>
 
     <!-- Agrega la referencia a Bootstrap JS al final del body -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/js/bootstrap.bundle.min.js"></script>
